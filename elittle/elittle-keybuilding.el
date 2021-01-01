@@ -33,6 +33,8 @@
 (defun elittle-keybuilding-c-c++-init ()
     "Initialize C/C++ keybuilding"
     (local-set-key (kbd "M-4") 'ff-find-other-file)
+    (local-set-key (kbd "M-5") 'compile-dwim)
+    (local-set-key (kbd "M-e 5") 'compile-dwin-new-command)
     )
 
 (defun elittle-keybuilding-c-init ()
