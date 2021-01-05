@@ -129,6 +129,8 @@
         :init
         (setq imenu-auto-rescan t)
         (setq imenu-use-popup-menu nil))
+    ;; built-in hideshow
+    (require 'hideshow)
     )
 
 (defun elittle-config-elisp-init ()
@@ -151,6 +153,8 @@
             ("\\.h" (".cpp"".c"))))
     (setq ff-search-directories
           '("." "../src" "../include"))
+    ;; hs-minor-mode
+    (hs-minor-mode)
     )
 
 (defun elittle-config-c-init ()

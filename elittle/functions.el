@@ -493,3 +493,32 @@ Else it is a user buffer."
     (interactive)
     (setq-default compile-command "")
     (compile-dwim))
+
+
+(defun my-window-horz ()
+    "Expand current window"
+    (interactive)
+    (enlarge-window-horizontally 2))
+
+(defun my-window-vert ()
+    "Expand current window"
+    (interactive)
+    (enlarge-window 2))
+
+(defun my-window-50-horz ()
+    "Expand current window 50%"
+    (interactive)
+    (let* ((width (round (* (frame-width) 0.5)))
+           (cur-width (window-width))
+           (delta (- width (+ cur-width 5))))
+        (enlarge-window-horizontally delta)))
+
+(defun my-window-50-vert ()
+    "Expand current window 50%"
+    (interactive)
+    (let* ((height (round (* (frame-height) 0.5)))
+           (cur-height (window-height))
+           (delta (- height (+ cur-height 5))))
+        (enlarge-window delta)))
+
+
